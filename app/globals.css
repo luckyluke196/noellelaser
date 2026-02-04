@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-warm-white text-charcoal font-sans antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-burgundy text-white px-8 py-3 rounded-full font-medium 
+           hover:bg-burgundy-dark transition-all duration-300 
+           shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-burgundy text-burgundy px-8 py-3 
+           rounded-full font-medium hover:bg-burgundy hover:text-white 
+           transition-all duration-300;
+  }
+  
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .heading-1 {
+    @apply font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-charcoal leading-tight;
+  }
+  
+  .heading-2 {
+    @apply font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-charcoal leading-tight;
+  }
+  
+  .heading-3 {
+    @apply font-serif text-2xl sm:text-3xl font-semibold text-charcoal;
+  }
+  
+  .text-body {
+    @apply text-charcoal-light text-base sm:text-lg leading-relaxed;
+  }
+}

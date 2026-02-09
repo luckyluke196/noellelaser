@@ -4,11 +4,11 @@ import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Get in touch with Noelle Laser in Johannesburg. Book your free consultation, ask questions, or schedule an appointment.',
+  description: 'Get in touch with Noelle Laser in Randburg, Johannesburg. Book your appointment or ask questions about laser hair removal.',
 }
 
 export default function ContactPage() {
-  const phoneNumber = '27123456789'
+  const phoneNumber = '27722991188'
   const whatsappMessage = encodeURIComponent('Hi, I\'d like to enquire about laser hair removal at Noelle Laser.')
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`
 
@@ -20,7 +20,7 @@ export default function ContactPage() {
           <h1 className="heading-1 mb-6">Contact Us</h1>
           <p className="text-body max-w-2xl mx-auto">
             Ready to start your journey to smooth, beautiful skin? 
-            Get in touch with us today for a free consultation.
+            Please call Candice to book your appointment today.
           </p>
         </div>
       </section>
@@ -40,18 +40,18 @@ export default function ContactPage() {
               <div className="bg-burgundy rounded-2xl p-8 text-white">
                 <h3 className="font-serif text-2xl font-semibold mb-6">Quick Contact</h3>
                 <p className="text-rose-gold-light mb-6">
-                  Prefer to reach us directly? Contact us via phone or WhatsApp 
-                  for a quick response.
+                  Please call Candice to book your appointment today. 
+                  We&apos;re happy to answer any questions.
                 </p>
                 <div className="space-y-4">
                   <a 
-                    href="tel:+27123456789" 
+                    href="tel:0722991188" 
                     className="flex items-center gap-4 bg-white/10 rounded-xl p-4 hover:bg-white/20 transition-colors"
                   >
                     <Phone className="h-6 w-6 text-rose-gold" />
                     <div>
                       <div className="text-sm text-rose-gold-light">Call Us</div>
-                      <div className="font-medium">+27 12 345 6789</div>
+                      <div className="font-medium">072 299 1188</div>
                     </div>
                   </a>
                   <a 
@@ -88,8 +88,8 @@ export default function ContactPage() {
                     <div>
                       <h4 className="font-semibold mb-1">Address</h4>
                       <p className="text-charcoal-light">
-                        123 Wellness Street, Sandton<br />
-                        Johannesburg, 2196<br />
+                        25 Hawken Avenue, Bromhof<br />
+                        Randburg, Johannesburg<br />
                         South Africa
                       </p>
                     </div>
@@ -99,8 +99,8 @@ export default function ContactPage() {
                     <div>
                       <h4 className="font-semibold mb-1">Opening Hours</h4>
                       <div className="text-charcoal-light space-y-1">
-                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                        <p>Saturday: 9:00 AM - 2:00 PM</p>
+                        <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                        <p>Saturday: 8:00 AM - 1:00 PM</p>
                         <p>Sunday: Closed</p>
                       </div>
                     </div>
@@ -108,14 +108,19 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Parking Info */}
-              <div className="bg-white rounded-2xl p-6 border border-rose-gold-light">
-                <h4 className="font-semibold mb-2">Parking Information</h4>
-                <p className="text-charcoal-light text-sm">
-                  Free parking available in our building&apos;s underground parking. 
-                  Enter via the main gate and take a ticket. We&apos;ll validate your 
-                  parking at reception.
+              {/* Booking CTA */}
+              <div className="bg-white rounded-2xl p-6 border border-rose-gold-light text-center">
+                <h4 className="font-semibold mb-2">Ready to Book?</h4>
+                <p className="text-charcoal-light text-sm mb-4">
+                  Please call Candice to book your appointment today.
                 </p>
+                <a 
+                  href="tel:0722991188" 
+                  className="btn-primary inline-flex items-center gap-2"
+                >
+                  <Phone className="h-5 w-5" />
+                  072 299 1188
+                </a>
               </div>
             </div>
           </div>
@@ -128,10 +133,10 @@ export default function ContactPage() {
           <div className="bg-rose-gold-light rounded-2xl h-80 flex items-center justify-center">
             <div className="text-center text-charcoal-light">
               <MapPin className="h-16 w-16 mx-auto mb-4 text-burgundy/50" />
-              <h3 className="font-serif text-xl font-semibold mb-2">Find Us in Sandton</h3>
-              <p className="text-sm mb-4">123 Wellness Street, Sandton, Johannesburg</p>
+              <h3 className="font-serif text-xl font-semibold mb-2">Find Us in Bromhof, Randburg</h3>
+              <p className="text-sm mb-4">25 Hawken Avenue, Bromhof, Randburg</p>
               <a 
-                href="https://maps.google.com/?q=Sandton,+Johannesburg"
+                href="https://maps.google.com/?q=25+Hawken+Avenue,+Bromhof,+Randburg"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary inline-block"

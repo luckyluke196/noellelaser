@@ -31,8 +31,8 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-gray-400 mb-6">
-              Premium laser hair removal in Johannesburg. Experience smooth, 
-              confident skin with our advanced technology and expert care.
+              Premium laser hair removal in Randburg, Johannesburg. Experience smooth, 
+              confident skin with our advanced 4-wavelength technology.
             </p>
           </div>
 
@@ -83,17 +83,17 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-rose-gold flex-shrink-0 mt-0.5" />
                 <span className="text-gray-400">
-                  123 Wellness Street, Sandton<br />
-                  Johannesburg, South Africa
+                  25 Hawken Avenue, Bromhof<br />
+                  Randburg, Johannesburg
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-rose-gold flex-shrink-0" />
                 <a 
-                  href="tel:+27123456789" 
+                  href="tel:0722991188" 
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  +27 12 345 6789
+                  072 299 1188
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -108,8 +108,8 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Clock className="h-5 w-5 text-rose-gold flex-shrink-0 mt-0.5" />
                 <span className="text-gray-400">
-                  Mon - Fri: 9:00 - 18:00<br />
-                  Sat: 9:00 - 14:00
+                  Mon - Fri: 8:00 AM - 6:00 PM<br />
+                  Sat: 8:00 AM - 1:00 PM
                 </span>
               </li>
             </ul>

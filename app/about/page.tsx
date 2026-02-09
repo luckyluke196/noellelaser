@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { Award, Shield, Heart, Users, MapPin, Clock } from 'lucide-react'
+import Image from 'next/image'
+import { Award, Shield, Heart, Zap, MapPin, Clock, Phone } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn about Noelle Laser, Johannesburg\'s premier laser hair removal clinic. Meet our experienced team and discover our commitment to excellence.',
+  description: 'Learn about Noelle Laser, Randburg\'s premier laser hair removal clinic. Founded by Candice Bezuidenhout, offering pain-free treatments with advanced 4-wavelength technology.',
 }
 
 const values = [
@@ -16,35 +16,17 @@ const values = [
   {
     icon: Shield,
     title: 'Safety First',
-    description: 'We adhere to the highest safety standards with certified technicians and FDA-approved equipment.',
+    description: 'We use advanced technology designed for sensitive skin, safe for all skin tones.',
   },
   {
     icon: Award,
     title: 'Excellence',
-    description: 'We continuously invest in the latest technology and training to deliver exceptional results.',
+    description: 'Great results with fewer sessions thanks to our advanced 4-wavelength machine.',
   },
   {
-    icon: Users,
-    title: 'Inclusivity',
-    description: 'Our treatments are designed to work effectively on all skin types and tones.',
-  },
-]
-
-const team = [
-  {
-    name: 'Dr. Sarah Naidoo',
-    role: 'Medical Director',
-    description: 'With over 15 years in aesthetic medicine, Dr. Naidoo leads our clinical protocols and training.',
-  },
-  {
-    name: 'Noelle van der Berg',
-    role: 'Founder & Lead Specialist',
-    description: 'Certified laser technician with a passion for helping clients achieve their skincare goals.',
-  },
-  {
-    name: 'Thandi Molefe',
-    role: 'Senior Laser Technician',
-    description: 'Specializing in treatments for diverse skin types with 8 years of experience.',
+    icon: Zap,
+    title: 'Pain-Free',
+    description: 'Our treatments are pain-free, leaving your skin glowing and beautifully smooth.',
   },
 ]
 
@@ -62,47 +44,56 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Story Section */}
+      {/* Founder Section */}
       <section className="bg-white section-padding">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="heading-2 mb-6">Our Story</h2>
+            <div className="order-2 lg:order-1">
+              <h2 className="heading-2 mb-6">Founded by Candice Bezuidenhout</h2>
               <p className="text-body mb-4">
-                Founded in 2019, Noelle Laser was born from a simple belief: everyone deserves 
-                to feel confident in their own skin. What started as a small clinic in Sandton 
-                has grown into one of Johannesburg&apos;s most trusted laser hair removal destinations.
+                Noelle Laser was founded with a simple mission: to provide exceptional laser 
+                hair removal results with fewer sessions and zero pain. After experiencing 
+                the frustration of ineffective treatments and painful procedures, Candice 
+                set out to bring truly advanced technology to Johannesburg.
               </p>
               <p className="text-body mb-4">
-                Our founder, Noelle van der Berg, experienced firsthand the frustration of 
-                constant shaving, painful waxing, and ineffective treatments. Determined to 
-                find a better solution, she trained with leading experts and invested in 
-                state-of-the-art technology to bring world-class laser treatments to South Africa.
+                At Noelle Laser, we focus on great results with fewer sessions. Our process 
+                is pain-free and our 4-wavelength machine ensures results from the very start. 
+                We use stronger beams with a higher pulse, delivering exceptional outcomes.
               </p>
-              <p className="text-body">
-                Today, we&apos;ve helped over 500 clients achieve smooth, beautiful skin. Our 
-                success is built on three pillars: advanced technology, expert care, and 
-                genuine dedication to every client who walks through our doors.
+              <p className="text-body mb-6">
+                Our treatments can remove pigment and reduce scarring, leaving the area 
+                glowing and beautifully smooth. The machine is designed for people with 
+                sensitive skin and works well on all skin tones.
               </p>
+              <div className="bg-rose-gold-light/50 rounded-xl p-6">
+                <p className="text-burgundy font-semibold text-lg mb-2">
+                  Please call Candice to book your appointment today.
+                </p>
+                <a 
+                  href="tel:0722991188" 
+                  className="btn-primary inline-flex items-center gap-2"
+                >
+                  <Phone className="h-5 w-5" />
+                  072 299 1188
+                </a>
+              </div>
             </div>
-            <div className="bg-gradient-to-br from-rose-gold-light to-rose-gold rounded-2xl p-8 lg:p-12">
-              <div className="space-y-6">
-                <div className="bg-white rounded-xl p-6 shadow-md">
-                  <div className="text-3xl font-bold text-burgundy mb-1">2019</div>
-                  <div className="text-charcoal">Founded in Johannesburg</div>
+            <div className="order-1 lg:order-2">
+              <div className="bg-gradient-to-br from-rose-gold-light to-rose-gold rounded-2xl p-8 text-center">
+                <div className="bg-white rounded-full w-48 h-48 mx-auto mb-6 shadow-lg overflow-hidden relative">
+                  <Image
+                    src="/images/candice.jpg"
+                    alt="Candice Bezuidenhout - Founder of Noelle Laser"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
-                <div className="bg-white rounded-xl p-6 shadow-md">
-                  <div className="text-3xl font-bold text-burgundy mb-1">500+</div>
-                  <div className="text-charcoal">Happy Clients</div>
-                </div>
-                <div className="bg-white rounded-xl p-6 shadow-md">
-                  <div className="text-3xl font-bold text-burgundy mb-1">10,000+</div>
-                  <div className="text-charcoal">Treatments Completed</div>
-                </div>
-                <div className="bg-white rounded-xl p-6 shadow-md">
-                  <div className="text-3xl font-bold text-burgundy mb-1">98%</div>
-                  <div className="text-charcoal">Client Satisfaction</div>
-                </div>
+                <h3 className="font-serif text-2xl font-semibold text-charcoal mb-2">
+                  Candice Bezuidenhout
+                </h3>
+                <p className="text-burgundy font-medium">Founder</p>
               </div>
             </div>
           </div>
@@ -113,9 +104,9 @@ export default function AboutPage() {
       <section className="bg-rose-gold-light/30 section-padding">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="heading-2 mb-4">Our Values</h2>
+            <h2 className="heading-2 mb-4">Why Choose Noelle Laser?</h2>
             <p className="text-body max-w-2xl mx-auto">
-              These principles guide everything we do at Noelle Laser.
+              We&apos;re committed to providing the best laser hair removal experience in Johannesburg.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -132,48 +123,29 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="bg-white section-padding">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="heading-2 mb-4">Meet Our Team</h2>
-            <p className="text-body max-w-2xl mx-auto">
-              Our certified specialists are passionate about helping you achieve your skincare goals.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-gradient-to-br from-rose-gold-light to-rose-gold w-48 h-48 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <Users className="h-24 w-24 text-burgundy/30" />
-                </div>
-                <h3 className="font-serif text-xl font-semibold mb-1">{member.name}</h3>
-                <p className="text-burgundy font-medium mb-3">{member.role}</p>
-                <p className="text-charcoal-light">{member.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Our Technology Section */}
       <section className="bg-burgundy section-padding">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="heading-2 text-white mb-6">Advanced Technology</h2>
+              <h2 className="heading-2 text-white mb-6">Advanced 4-Wavelength Technology</h2>
               <p className="text-rose-gold-light mb-4">
-                We use the latest diode laser technology, which is considered the gold 
-                standard in laser hair removal. Our equipment is FDA-approved and proven 
-                to deliver safe, effective results for all skin types.
+                At Noelle Laser, we use a state-of-the-art 4-wavelength machine that delivers 
+                results from the very first session. Our stronger beams with higher pulse ensure 
+                great results with fewer sessions - typically just 4-6 sessions compared to 
+                8-10 with older technology.
               </p>
               <ul className="space-y-3">
                 {[
-                  'FDA-approved diode laser systems',
-                  'Advanced cooling technology for comfort',
-                  'Suitable for all skin tones (Fitzpatrick I-VI)',
-                  'Precise targeting of hair follicles',
-                  'Minimal side effects and downtime',
+                  'Pain-free treatment process',
+                  'Results visible from the first session',
+                  '4-wavelength technology for all hair types',
+                  'Stronger beams with higher pulse',
+                  'Can remove pigment and reduce scarring',
+                  'Leaves skin glowing and beautifully smooth',
+                  'Designed for sensitive skin',
+                  'Works effectively on all skin tones',
+                  'Quick and efficient treatments',
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-3 text-white">
                     <div className="bg-rose-gold rounded-full p-1">
@@ -187,19 +159,20 @@ export default function AboutPage() {
               </ul>
             </div>
             <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm">
-              <h3 className="font-serif text-2xl font-semibold text-white mb-6">Certifications</h3>
-              <div className="space-y-4">
-                {[
-                  'Registered with the Health Professions Council of South Africa',
-                  'Certified Laser Safety Officers on staff',
-                  'Regular equipment maintenance and calibration',
-                  'Ongoing staff training and certification',
-                ].map((cert, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <Award className="h-5 w-5 text-rose-gold flex-shrink-0 mt-0.5" />
-                    <span className="text-white">{cert}</span>
-                  </div>
-                ))}
+              <h3 className="font-serif text-2xl font-semibold text-white mb-6">The Noelle Difference</h3>
+              <div className="space-y-6">
+                <div className="bg-white/10 rounded-xl p-4">
+                  <div className="text-3xl font-bold text-rose-gold mb-1">4-6</div>
+                  <div className="text-white">Sessions for optimal results</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-4">
+                  <div className="text-3xl font-bold text-rose-gold mb-1">100%</div>
+                  <div className="text-white">Pain-free experience</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-4">
+                  <div className="text-3xl font-bold text-rose-gold mb-1">All</div>
+                  <div className="text-white">Skin tones treated effectively</div>
+                </div>
               </div>
             </div>
           </div>
@@ -212,7 +185,7 @@ export default function AboutPage() {
           <div className="text-center mb-12">
             <h2 className="heading-2 mb-4">Visit Our Clinic</h2>
             <p className="text-body max-w-2xl mx-auto">
-              Conveniently located in Sandton, Johannesburg. Easy parking available.
+              Conveniently located in Bromhof, Randburg.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -223,8 +196,8 @@ export default function AboutPage() {
                   <div>
                     <h3 className="font-semibold mb-1">Address</h3>
                     <p className="text-charcoal-light">
-                      123 Wellness Street, Sandton<br />
-                      Johannesburg, 2196<br />
+                      25 Hawken Avenue, Bromhof<br />
+                      Randburg, Johannesburg<br />
                       South Africa
                     </p>
                   </div>
@@ -234,10 +207,19 @@ export default function AboutPage() {
                   <div>
                     <h3 className="font-semibold mb-1">Opening Hours</h3>
                     <p className="text-charcoal-light">
-                      Monday - Friday: 9:00 AM - 6:00 PM<br />
-                      Saturday: 9:00 AM - 2:00 PM<br />
+                      Monday - Friday: 8:00 AM - 6:00 PM<br />
+                      Saturday: 8:00 AM - 1:00 PM<br />
                       Sunday: Closed
                     </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Phone className="h-6 w-6 text-burgundy flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold mb-1">Phone</h3>
+                    <a href="tel:0722991188" className="text-burgundy font-medium hover:underline">
+                      072 299 1188
+                    </a>
                   </div>
                 </div>
               </div>
@@ -245,8 +227,8 @@ export default function AboutPage() {
             <div className="bg-rose-gold-light rounded-2xl h-64 md:h-auto flex items-center justify-center">
               <div className="text-center text-charcoal-light">
                 <MapPin className="h-12 w-12 mx-auto mb-2 text-burgundy/50" />
-                <p>Map placeholder</p>
-                <p className="text-sm">(Google Maps integration available)</p>
+                <p className="font-semibold">25 Hawken Avenue</p>
+                <p className="text-sm">Bromhof, Randburg</p>
               </div>
             </div>
           </div>
@@ -258,12 +240,16 @@ export default function AboutPage() {
         <div className="container-custom text-center">
           <h2 className="heading-2 mb-4">Experience the Noelle Laser Difference</h2>
           <p className="text-body max-w-2xl mx-auto mb-8">
-            Book your free consultation and discover why hundreds of clients trust 
-            us with their laser hair removal journey.
+            Please call Candice to book your appointment today and discover why 
+            our clients love their pain-free, effective treatments.
           </p>
-          <Link href="/contact" className="btn-primary">
-            Book Free Consultation
-          </Link>
+          <a 
+            href="tel:0722991188" 
+            className="btn-primary inline-flex items-center gap-2"
+          >
+            <Phone className="h-5 w-5" />
+            Book Today - 072 299 1188
+          </a>
         </div>
       </section>
     </>

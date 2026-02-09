@@ -1,49 +1,49 @@
 import Link from 'next/link'
 import ServiceCard from '@/components/ServiceCard'
-import { Sparkles, Shield, Clock, Heart, Award, Users, ChevronRight } from 'lucide-react'
+import { Sparkles, Shield, Clock, Heart, Zap, ChevronRight, Phone } from 'lucide-react'
 
 const featuredServices = [
   {
     title: 'Full Body',
-    description: 'Complete laser hair removal for silky smooth skin from head to toe. Our most comprehensive treatment.',
+    description: 'Complete laser hair removal for silky smooth skin from head to toe. Pain-free with lasting results.',
     icon: Sparkles,
   },
   {
     title: 'Face & Neck',
-    description: 'Precise treatment for upper lip, chin, sideburns, and neck. Perfect for a flawless complexion.',
+    description: 'Precise treatment for lip, chin, brow, and sides. Leave with a flawless, glowing complexion.',
     icon: Heart,
   },
   {
     title: 'Legs',
-    description: 'Say goodbye to shaving. Enjoy beautifully smooth legs all year round with long-lasting results.',
-    icon: Award,
+    description: 'Say goodbye to shaving. Enjoy beautifully smooth legs all year round with just 4-6 sessions.',
+    icon: Zap,
   },
   {
     title: 'Underarms',
-    description: 'Quick and effective treatment for underarm hair. Feel confident and fresh every day.',
+    description: 'Quick and effective treatment. Feel confident and fresh every day with pain-free removal.',
     icon: Shield,
   },
 ]
 
 const benefits = [
   {
-    title: 'Advanced Technology',
-    description: 'We use the latest diode laser technology, safe for all skin types and proven to deliver exceptional results.',
+    title: '4-Wavelength Technology',
+    description: 'Our advanced machine uses stronger beams with higher pulse for results from the first session.',
     icon: Sparkles,
   },
   {
-    title: 'Experienced Team',
-    description: 'Our certified specialists have years of experience and undergo continuous training in laser treatments.',
-    icon: Users,
+    title: 'Pain-Free Treatment',
+    description: 'Unlike older technology, our treatments are completely pain-free. Designed for sensitive skin.',
+    icon: Heart,
   },
   {
-    title: 'Long-Lasting Results',
-    description: 'Experience up to 90% permanent hair reduction after completing your treatment sessions.',
+    title: 'Fewer Sessions',
+    description: 'Just 4-6 sessions needed for optimal results. Great results with less time in the chair.',
     icon: Clock,
   },
   {
-    title: 'Safe & Comfortable',
-    description: 'Our modern clinic provides a relaxing environment with treatments designed for your comfort.',
+    title: 'All Skin Tones',
+    description: 'Works effectively on all skin tones. Can also remove pigment and reduce scarring.',
     icon: Shield,
   },
 ]
@@ -51,17 +51,17 @@ const benefits = [
 const testimonials = [
   {
     name: 'Sarah M.',
-    text: 'After just 4 sessions, I\'ve seen incredible results. The team is professional and made me feel so comfortable.',
-    location: 'Sandton',
+    text: 'After just 4 sessions, I\'ve seen incredible results. Completely pain-free and my skin is glowing!',
+    location: 'Randburg',
   },
   {
     name: 'Thandi K.',
-    text: 'Best decision I\'ve ever made! No more waxing or shaving. Noelle Laser changed my life.',
-    location: 'Rosebank',
+    text: 'Best decision I\'ve ever made! No more waxing or shaving. Candice is so professional and friendly.',
+    location: 'Bromhof',
   },
   {
     name: 'Michelle P.',
-    text: 'The staff are amazing and the results speak for themselves. I recommend Noelle Laser to everyone.',
+    text: 'I was nervous about laser but it was totally pain-free. The results speak for themselves!',
     location: 'Fourways',
   },
 ]
@@ -74,20 +74,21 @@ export default function HomePage() {
         <div className="container-custom section-padding text-center">
           <div className="inline-flex items-center gap-2 bg-burgundy/10 text-burgundy px-4 py-2 rounded-full mb-6">
             <Sparkles className="h-4 w-4" />
-            <span className="text-sm font-medium">Premium Laser Hair Removal in Johannesburg</span>
+            <span className="text-sm font-medium">Pain-Free Laser Hair Removal in Randburg</span>
           </div>
           <h1 className="heading-1 mb-6 max-w-4xl mx-auto">
             Embrace Smooth, Confident Skin with{' '}
             <span className="text-burgundy">Noelle Laser</span>
           </h1>
           <p className="text-body max-w-2xl mx-auto mb-10">
-            Experience the freedom of permanent hair reduction with our advanced laser technology. 
-            Safe, effective, and tailored to your unique skin type.
+            Experience pain-free laser hair removal with results from the first session. 
+            Our 4-wavelength technology delivers great results with just 4-6 sessions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary">
-              Book Free Consultation
-            </Link>
+            <a href="tel:0722991188" className="btn-primary inline-flex items-center justify-center gap-2">
+              <Phone className="h-5 w-5" />
+              Book Today - 072 299 1188
+            </a>
             <Link href="/services" className="btn-secondary">
               View Our Services
             </Link>
@@ -104,14 +105,14 @@ export default function HomePage() {
                 Your Journey to <span className="text-burgundy">Radiant Skin</span> Starts Here
               </h2>
               <p className="text-body mb-6">
-                At Noelle Laser, we believe everyone deserves to feel confident in their own skin. 
-                Our state-of-the-art clinic in Johannesburg combines cutting-edge laser technology 
-                with personalized care to deliver results that exceed your expectations.
+                At Noelle Laser, we focus on great results with fewer sessions. Our advanced 
+                4-wavelength machine uses stronger beams with a higher pulse, ensuring results 
+                from the very start. The process is completely pain-free.
               </p>
               <p className="text-body mb-8">
-                Whether you&apos;re tired of constant shaving, painful waxing, or dealing with 
-                ingrown hairs, our expert team is here to help you achieve smooth, beautiful 
-                skin that lasts.
+                We can remove pigment and reduce scarring, leaving your skin glowing and 
+                beautifully smooth. Our machine is designed for people with sensitive skin 
+                and works well on all skin tones.
               </p>
               <Link href="/about" className="inline-flex items-center gap-2 text-burgundy font-medium hover:gap-3 transition-all">
                 Learn More About Us <ChevronRight className="h-5 w-5" />
@@ -120,20 +121,20 @@ export default function HomePage() {
             <div className="bg-gradient-to-br from-rose-gold-light to-rose-gold rounded-2xl p-8 lg:p-12">
               <div className="grid grid-cols-2 gap-6">
                 <div className="bg-white rounded-xl p-6 text-center shadow-md">
-                  <div className="text-4xl font-bold text-burgundy mb-2">500+</div>
-                  <div className="text-charcoal-light text-sm">Happy Clients</div>
+                  <div className="text-4xl font-bold text-burgundy mb-2">4-6</div>
+                  <div className="text-charcoal-light text-sm">Sessions Needed</div>
                 </div>
                 <div className="bg-white rounded-xl p-6 text-center shadow-md">
-                  <div className="text-4xl font-bold text-burgundy mb-2">5+</div>
-                  <div className="text-charcoal-light text-sm">Years Experience</div>
+                  <div className="text-4xl font-bold text-burgundy mb-2">100%</div>
+                  <div className="text-charcoal-light text-sm">Pain-Free</div>
                 </div>
                 <div className="bg-white rounded-xl p-6 text-center shadow-md">
-                  <div className="text-4xl font-bold text-burgundy mb-2">98%</div>
-                  <div className="text-charcoal-light text-sm">Satisfaction Rate</div>
+                  <div className="text-4xl font-bold text-burgundy mb-2">All</div>
+                  <div className="text-charcoal-light text-sm">Skin Tones</div>
                 </div>
                 <div className="bg-white rounded-xl p-6 text-center shadow-md">
-                  <div className="text-4xl font-bold text-burgundy mb-2">10k+</div>
-                  <div className="text-charcoal-light text-sm">Sessions Done</div>
+                  <div className="text-4xl font-bold text-burgundy mb-2">4</div>
+                  <div className="text-charcoal-light text-sm">Wavelengths</div>
                 </div>
               </div>
             </div>
@@ -148,7 +149,7 @@ export default function HomePage() {
             <h2 className="heading-2 mb-4">Our Popular Treatments</h2>
             <p className="text-body max-w-2xl mx-auto">
               From targeted areas to full body treatments, we offer comprehensive 
-              laser hair removal solutions tailored to your needs.
+              laser hair removal solutions. All treatments are pain-free.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -221,13 +222,14 @@ export default function HomePage() {
         <div className="container-custom text-center">
           <h2 className="heading-2 mb-4">Ready to Start Your Journey?</h2>
           <p className="text-body max-w-2xl mx-auto mb-8">
-            Book your free consultation today and discover how Noelle Laser can help 
-            you achieve the smooth, beautiful skin you&apos;ve always wanted.
+            Please call Candice to book your appointment today. Experience pain-free 
+            laser hair removal with results from the first session.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary">
-              Book Free Consultation
-            </Link>
+            <a href="tel:0722991188" className="btn-primary inline-flex items-center justify-center gap-2">
+              <Phone className="h-5 w-5" />
+              Book Today - 072 299 1188
+            </a>
             <Link href="/pricing" className="btn-secondary">
               View Pricing
             </Link>

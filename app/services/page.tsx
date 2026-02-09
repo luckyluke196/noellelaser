@@ -1,84 +1,83 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { Sparkles, Zap, Shield, Clock, Check } from 'lucide-react'
+import { Sparkles, Zap, Shield, Clock, Check, Phone } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Services',
-  description: 'Explore our comprehensive laser hair removal services. From full body to targeted areas, we offer safe and effective treatments for all skin types in Johannesburg.',
+  description: 'Explore our comprehensive laser hair removal services in Randburg. Pain-free treatments with our advanced 4-wavelength machine. Only 4-6 sessions needed for great results.',
 }
 
 const treatmentAreas = [
   {
     id: 'face',
     name: 'Face & Neck',
-    areas: ['Upper Lip', 'Chin', 'Sideburns', 'Full Face', 'Neck', 'Ears'],
-    description: 'Achieve a flawless, hair-free complexion with our precise facial treatments. Perfect for upper lip, chin, and sideburns.',
-    sessions: '6-8 sessions',
+    areas: ['Lip', 'Chin', 'Brow', 'Sides', 'Full Face'],
+    description: 'Achieve a flawless, hair-free complexion with our precise facial treatments. Pain-free and effective.',
+    sessions: '4-6 sessions',
   },
   {
     id: 'underarms',
     name: 'Underarms',
     areas: ['Underarms'],
     description: 'Quick and effective underarm treatment. Say goodbye to daily shaving and razor burn. Feel confident and fresh.',
-    sessions: '6-8 sessions',
+    sessions: '4-6 sessions',
   },
   {
     id: 'bikini',
     name: 'Bikini Area',
-    areas: ['Bikini Line', 'Brazilian', 'Full Bikini'],
-    description: 'From bikini line touch-ups to full Brazilian treatments. Discreet, professional, and comfortable experience.',
-    sessions: '6-8 sessions',
+    areas: ['Bikini Sides', 'Top of Bikini', 'Full Hollywood'],
+    description: 'From bikini line touch-ups to full Hollywood treatments. Discreet, professional, and pain-free.',
+    sessions: '4-6 sessions',
   },
   {
     id: 'legs',
     name: 'Legs',
-    areas: ['Lower Legs', 'Upper Legs', 'Full Legs', 'Knees'],
+    areas: ['Half Leg', 'Full Leg'],
     description: 'Silky smooth legs all year round. No more waxing appointments or razor cuts. Long-lasting results.',
-    sessions: '6-8 sessions',
+    sessions: '4-6 sessions',
   },
   {
     id: 'arms',
-    name: 'Arms & Hands',
-    areas: ['Full Arms', 'Lower Arms', 'Upper Arms', 'Hands', 'Fingers'],
-    description: 'Smooth, hair-free arms and hands. Perfect for those who want to feel confident in short sleeves.',
-    sessions: '6-8 sessions',
+    name: 'Arms',
+    areas: ['Half Arm', 'Full Arms'],
+    description: 'Smooth, hair-free arms. Perfect for those who want to feel confident in short sleeves.',
+    sessions: '4-6 sessions',
   },
   {
-    id: 'body',
-    name: 'Body',
-    areas: ['Back', 'Chest', 'Stomach', 'Shoulders'],
-    description: 'Comprehensive body treatments for larger areas. Ideal for both men and women seeking smooth skin.',
-    sessions: '6-10 sessions',
+    id: 'mens',
+    name: 'Men\'s Treatments',
+    areas: ['Back', 'Chest', 'Stomach', 'Beard & Neck', 'Nose Hair', 'Ear Hair'],
+    description: 'Comprehensive treatments for men. Professional and comfortable experience with lasting results.',
+    sessions: '4-6 sessions',
   },
   {
     id: 'full-body',
     name: 'Full Body',
     areas: ['Complete Head-to-Toe Treatment'],
     description: 'Our most comprehensive package. Full body laser hair removal for complete transformation.',
-    sessions: '6-10 sessions',
+    sessions: '4-6 sessions',
   },
 ]
 
 const benefits = [
   {
     icon: Zap,
-    title: 'Fast Sessions',
-    description: 'Most treatments take only 15-60 minutes depending on the area.',
+    title: 'Pain-Free',
+    description: 'Our advanced technology ensures a completely pain-free treatment experience.',
   },
   {
     icon: Shield,
-    title: 'Safe for All Skin Types',
-    description: 'Our advanced technology is suitable for all skin tones and types.',
+    title: 'All Skin Types',
+    description: 'Designed for sensitive skin and works effectively on all skin tones.',
   },
   {
     icon: Clock,
-    title: 'Long-Lasting Results',
-    description: 'Experience up to 90% permanent hair reduction after completing sessions.',
+    title: 'Fewer Sessions',
+    description: 'Just 4-6 sessions needed thanks to our powerful 4-wavelength machine.',
   },
   {
     icon: Sparkles,
-    title: 'Minimal Discomfort',
-    description: 'Advanced cooling technology ensures comfortable treatments.',
+    title: 'Glowing Results',
+    description: 'Leaves skin glowing and beautifully smooth. Can reduce pigment and scarring.',
   },
 ]
 
@@ -90,8 +89,18 @@ export default function ServicesPage() {
         <div className="container-custom section-padding text-center">
           <h1 className="heading-1 mb-6">Our Services</h1>
           <p className="text-body max-w-2xl mx-auto">
-            Discover our comprehensive range of laser hair removal treatments. 
-            From quick touch-ups to full body transformations, we have a solution for you.
+            Pain-free laser hair removal with results from the first session. 
+            Our 4-wavelength machine delivers great results with fewer sessions.
+          </p>
+        </div>
+      </section>
+
+      {/* Technology Highlight Section */}
+      <section className="bg-burgundy py-8">
+        <div className="container-custom text-center px-4">
+          <p className="text-white text-lg">
+            <Sparkles className="h-5 w-5 inline mr-2 text-rose-gold" />
+            <strong>4-Wavelength Technology</strong> - Stronger beams, higher pulse, results from the start
           </p>
         </div>
       </section>
@@ -100,12 +109,11 @@ export default function ServicesPage() {
       <section className="bg-white section-padding">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="heading-2 mb-4">How Laser Hair Removal Works</h2>
+            <h2 className="heading-2 mb-4">Why Our Treatments Are Different</h2>
             <p className="text-body max-w-3xl mx-auto">
-              Our state-of-the-art diode laser technology targets hair follicles beneath the 
-              skin&apos;s surface, delivering precise pulses of light energy that disable hair growth 
-              without damaging surrounding tissue. The treatment is safe, effective, and provides 
-              long-lasting results.
+              At Noelle Laser, we focus on great results with fewer sessions. Our advanced 
+              4-wavelength machine uses stronger beams with a higher pulse, ensuring results 
+              from the very first treatment. The process is pain-free and quick.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -128,8 +136,8 @@ export default function ServicesPage() {
           <div className="text-center mb-12">
             <h2 className="heading-2 mb-4">Treatment Areas</h2>
             <p className="text-body max-w-2xl mx-auto">
-              Choose from our range of treatment areas. Each package includes 
-              a personalized consultation to assess your needs.
+              We offer treatments for all areas. 4-6 sessions recommended for optimal 
+              results due to our machine&apos;s efficiency.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -169,15 +177,15 @@ export default function ServicesPage() {
           <div className="text-center mb-12">
             <h2 className="heading-2 mb-4">Your Treatment Journey</h2>
             <p className="text-body max-w-2xl mx-auto">
-              From consultation to your final session, we guide you every step of the way.
+              A quick and efficient process that leaves your skin glowing and smooth.
             </p>
           </div>
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { step: '01', title: 'Consultation', description: 'Free assessment of your skin type and treatment plan' },
-              { step: '02', title: 'Preparation', description: 'We guide you on how to prepare for your session' },
-              { step: '03', title: 'Treatment', description: 'Quick and comfortable laser sessions' },
-              { step: '04', title: 'Results', description: 'Enjoy smooth, hair-free skin that lasts' },
+              { step: '01', title: 'Call Candice', description: 'Book your appointment by phone' },
+              { step: '02', title: 'Consultation', description: 'Quick assessment of your skin and treatment plan' },
+              { step: '03', title: 'Treatment', description: 'Pain-free laser sessions with immediate results' },
+              { step: '04', title: 'Glow', description: 'Enjoy smooth, glowing, hair-free skin' },
             ].map((item, index) => (
               <div key={index} className="text-center">
                 <div className="text-5xl font-serif font-bold text-rose-gold mb-4">{item.step}</div>
@@ -194,16 +202,23 @@ export default function ServicesPage() {
         <div className="container-custom text-center">
           <h2 className="heading-2 text-white mb-4">Ready to Get Started?</h2>
           <p className="text-rose-gold-light max-w-2xl mx-auto mb-8">
-            Book your free consultation today and let us create a personalized 
-            treatment plan just for you.
+            Please call Candice to book your appointment today. Experience pain-free 
+            laser hair removal with results from the first session.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-white text-burgundy px-8 py-3 rounded-full font-medium hover:bg-rose-gold-light transition-all duration-300">
-              Book Free Consultation
-            </Link>
-            <Link href="/pricing" className="border-2 border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white hover:text-burgundy transition-all duration-300">
+            <a 
+              href="tel:0722991188" 
+              className="bg-white text-burgundy px-8 py-3 rounded-full font-medium hover:bg-rose-gold-light transition-all duration-300 inline-flex items-center justify-center gap-2"
+            >
+              <Phone className="h-5 w-5" />
+              Book Today - 072 299 1188
+            </a>
+            <a 
+              href="/pricing" 
+              className="border-2 border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white hover:text-burgundy transition-all duration-300"
+            >
               View Pricing
-            </Link>
+            </a>
           </div>
         </div>
       </section>

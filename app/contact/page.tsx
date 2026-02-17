@@ -88,7 +88,8 @@ export default function ContactPage() {
                     <div>
                       <h4 className="font-semibold mb-1">Address</h4>
                       <p className="text-charcoal-light">
-                        25 Hawken Avenue, Bromhof<br />
+                    38 Tiptol Road, <br />
+                    Randparkridge, Johannesburg<br />
                         Randburg, Johannesburg<br />
                         South Africa
                       </p>
@@ -134,9 +135,9 @@ export default function ContactPage() {
             <div className="text-center text-charcoal-light">
               <MapPin className="h-16 w-16 mx-auto mb-4 text-burgundy/50" />
               <h3 className="font-serif text-xl font-semibold mb-2">Find Us in Bromhof, Randburg</h3>
-              <p className="text-sm mb-4">25 Hawken Avenue, Bromhof, Randburg</p>
+              <p className="text-sm mb-4">38 Tiptol Road, Randparkridge, Johannesburg</p>
               <a 
-                href="https://maps.google.com/?q=25+Hawken+Avenue,+Bromhof,+Randburg"
+                href="https://maps.google.com/?q=38+Tiptol+Road,+Randparkridge,+Johannesburg"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary inline-block"

@@ -196,8 +196,8 @@ export default function AboutPage() {
                   <div>
                     <h3 className="font-semibold mb-1">Address</h3>
                     <p className="text-charcoal-light">
-                      25 Hawken Avenue, Bromhof<br />
-                      Randburg, Johannesburg<br />
+                    38 Tiptol Road, <br />
+                    Randparkridge, Johannesburg<br />
                       South Africa
                     </p>
                   </div>
@@ -227,8 +227,8 @@ export default function AboutPage() {
             <div className="bg-rose-gold-light rounded-2xl h-64 md:h-auto flex items-center justify-center">
               <div className="text-center text-charcoal-light">
                 <MapPin className="h-12 w-12 mx-auto mb-2 text-burgundy/50" />
-                <p className="font-semibold">25 Hawken Avenue</p>
-                <p className="text-sm">Bromhof, Randburg</p>
+                <p className="font-semibold">38 Tiptol Road</p>
+                <p className="text-sm">Randparkridge, Johannesburg</p>
               </div>
             </div>
           </div>

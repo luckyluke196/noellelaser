@@ -83,8 +83,8 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-rose-gold flex-shrink-0 mt-0.5" />
                 <span className="text-gray-400">
-                  25 Hawken Avenue, Bromhof<br />
-                  Randburg, Johannesburg
+                  38 Tiptol Road, Randparkridge<br />
+                  Johannesburg, South Africa
                 </span>
               </li>
               <li className="flex items-center gap-3">

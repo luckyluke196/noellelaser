@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import ContactForm from '@/components/ContactForm'
 import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -27,15 +26,8 @@ export default function ContactPage() {
 
       {/* Contact Section */}
       <section className="bg-white section-padding">
-        <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div>
-              <ContactForm />
-            </div>
-
-            {/* Contact Info */}
-            <div className="space-y-8">
+        <div className="container-custom max-w-3xl">
+          <div className="space-y-8">
               {/* Quick Contact */}
               <div className="bg-burgundy rounded-2xl p-8 text-white">
                 <h3 className="font-serif text-2xl font-semibold mb-6">Quick Contact</h3>
@@ -109,20 +101,19 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Booking CTA */}
-              <div className="bg-white rounded-2xl p-6 border border-rose-gold-light text-center">
-                <h4 className="font-semibold mb-2">Ready to Book?</h4>
-                <p className="text-charcoal-light text-sm mb-4">
-                  Please call Candice to book your appointment today.
-                </p>
-                <a 
-                  href="tel:0722991188" 
-                  className="btn-primary inline-flex items-center gap-2"
-                >
-                  <Phone className="h-5 w-5" />
-                  072 299 1188
-                </a>
-              </div>
+            {/* Booking CTA */}
+            <div className="bg-white rounded-2xl p-6 border border-rose-gold-light text-center">
+              <h4 className="font-semibold mb-2">Ready to Book?</h4>
+              <p className="text-charcoal-light text-sm mb-4">
+                Please call Candice to book your appointment today.
+              </p>
+              <a 
+                href="tel:0722991188" 
+                className="btn-primary inline-flex items-center gap-2"
+              >
+                <Phone className="h-5 w-5" />
+                072 299 1188
+              </a>
             </div>
           </div>
         </div>

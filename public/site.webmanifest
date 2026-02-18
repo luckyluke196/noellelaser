@@ -1,0 +1,21 @@
+{
+  "name": "Noelle Laser",
+  "short_name": "Noelle Laser",
+  "description": "Premium laser hair removal in Johannesburg. Smooth, confident skin with our 4-wavelength technology.",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#6B2D3C",
+  "background_color": "#FDFBFA",
+  "display": "standalone"
+}

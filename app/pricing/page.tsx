@@ -184,64 +184,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Package Deals Section */}
-      <section className="bg-white section-padding">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="heading-2 mb-4">Packages &amp; Specials</h2>
-            <p className="text-body max-w-2xl mx-auto">
-              Save more with our package deals. Enquire about our packages and specials today!
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {packages.map((pkg, index) => (
-              <div 
-                key={index} 
-                className={`rounded-2xl p-8 shadow-lg border-2 hover:shadow-xl transition-all relative ${
-                  pkg.special 
-                    ? 'bg-burgundy text-white border-burgundy' 
-                    : 'bg-white border-rose-gold-light'
-                }`}
-              >
-                {pkg.special && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-rose-gold text-charcoal text-xs font-bold px-4 py-1 rounded-full">
-                    LIMITED TIME
-                  </div>
-                )}
-                <h3 className={`font-serif text-xl font-semibold mb-2 ${pkg.special ? 'text-white' : 'text-charcoal'}`}>
-                  {pkg.name}
-                </h3>
-                <p className={`mb-4 text-sm ${pkg.special ? 'text-rose-gold-light' : 'text-charcoal-light'}`}>
-                  {pkg.areas}
-                </p>
-                <p className={`mb-4 text-sm ${pkg.special ? 'text-rose-gold-light' : 'text-charcoal-light'}`}>
-                  <Clock className="h-4 w-4 inline mr-1" />
-                  {pkg.sessions}
-                </p>
-                <div className={`text-4xl font-bold mb-2 ${pkg.special ? 'text-rose-gold' : 'text-burgundy'}`}>
-                  {pkg.price}
-                </div>
-                {pkg.endsDate && (
-                  <p className="text-rose-gold-light text-sm mb-4">
-                    Special ends {pkg.endsDate}
-                  </p>
-                )}
-                <a 
-                  href="tel:0722991188" 
-                  className={`block text-center py-3 px-6 rounded-full font-medium transition-all duration-300 mt-4 ${
-                    pkg.special 
-                      ? 'bg-white text-burgundy hover:bg-rose-gold-light' 
-                      : 'bg-burgundy text-white hover:bg-burgundy-dark'
-                  }`}
-                >
-                  Book Today
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      
       {/* Why Our Pricing Section */}
       <section className="bg-rose-gold-light/30 section-padding">
         <div className="container-custom">

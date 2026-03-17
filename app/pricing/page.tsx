@@ -8,18 +8,19 @@ export const metadata: Metadata = {
 }
 
 const womensPricing = [
-  { service: 'Lip', price: 'R85' },
+  { service: 'Upper Lip', price: 'R85' },
   { service: 'Brow', price: 'R85' },
   { service: 'Chin', price: 'R95' },
   { service: 'Top of Bikini', price: 'R100' },
-  { service: 'Sides', price: 'R110' },
+  { service: 'Stomach', price: 'R200' },
   { service: 'Bikini Sides', price: 'R110' },
-  { service: 'Underarm', price: 'R120' },
   { service: 'Full Hollywood', price: 'R350' },
+  { service: 'Underarms', price: 'R120' },
   { service: 'Full Face', price: 'R395' },
-  { service: 'Half Arm', price: 'R495' },
-  { service: 'Half Leg', price: 'R500' },
-  { service: 'Full Leg', price: 'R700' },
+  { service: 'Half Arms', price: 'R200' },
+  { service: 'Half Legs', price: 'R500' },
+  { service: 'Full Legs', price: 'R700' },
+  { service: 'Full Body', price: 'R1,000' },
 ]
 
 const mensPricing = [
@@ -94,7 +95,7 @@ export default function PricingPage() {
               All prices are per session. 4-6 sessions recommended for optimal results.
             </p>
           </div>
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-2xl mx-auto space-y-6">
             <div className="bg-rose-gold-light/30 rounded-2xl overflow-hidden">
               <div className="grid grid-cols-2 bg-burgundy text-white font-semibold">
                 <div className="px-6 py-4">Service</div>
@@ -110,6 +111,26 @@ export default function PricingPage() {
                 </div>
               ))}
             </div>
+            <div className="bg-burgundy text-white rounded-2xl p-6 text-center">
+              <p className="font-semibold mb-2">
+                Book <span className="text-rose-gold">4 sessions</span> and get <span className="text-rose-gold">2 free</span> for optimal results.
+              </p>
+              <p className="mb-2">
+                Please{' '}
+                <a
+                  href="https://wa.me/27722991188"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline font-semibold"
+                >
+                  WhatsApp 072 299 1188
+                </a>{' '}
+                to book your spot.
+              </p>
+              <p className="text-sm text-rose-gold-light">
+                Treatment therapists: Candice and Andy
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -123,7 +144,7 @@ export default function PricingPage() {
               All prices are per session. 4-6 sessions recommended for optimal results.
             </p>
           </div>
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-2xl mx-auto space-y-6">
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
               <div className="grid grid-cols-2 bg-charcoal text-white font-semibold">
                 <div className="px-6 py-4">Service</div>
@@ -138,6 +159,26 @@ export default function PricingPage() {
                   <div className="px-6 py-4 text-right font-semibold text-burgundy">{item.price}</div>
                 </div>
               ))}
+            </div>
+            <div className="bg-charcoal text-white rounded-2xl p-6 text-center">
+              <p className="font-semibold mb-2">
+                Book <span className="text-rose-gold">4 sessions</span> and get <span className="text-rose-gold">2 free</span> for optimal results.
+              </p>
+              <p className="mb-2">
+                Please{' '}
+                <a
+                  href="https://wa.me/27722991188"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline font-semibold"
+                >
+                  WhatsApp 072 299 1188
+                </a>{' '}
+                to book your spot.
+              </p>
+              <p className="text-sm text-gray-300">
+                Treatment therapists: Candice and Andy
+              </p>
             </div>
           </div>
         </div>

@@ -1,7 +1,15 @@
 import { MetadataRoute } from 'next'
+import { servicesData } from '@/lib/services-data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://noellelaser.co.za'
+
+  const servicePages: MetadataRoute.Sitemap = servicesData.map((service) => ({
+    url: `${baseUrl}/laser-hair-removal/${service.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.6,
+  }))
 
   return [
     {
@@ -40,5 +48,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    ...servicePages,
   ]
 }

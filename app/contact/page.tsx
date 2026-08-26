@@ -4,6 +4,9 @@ import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Contact Us',
   description: 'Get in touch with Noelle Laser in Randburg, Johannesburg. Book your appointment or ask questions about laser hair removal.',
+  alternates: {
+    canonical: '/contact',
+  },
 }
 
 export default function ContactPage() {

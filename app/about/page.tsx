@@ -5,6 +5,9 @@ import { Award, Shield, Heart, Zap, MapPin, Clock, Phone } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'About Us',
   description: 'Learn about Noelle Laser, Randburg\'s premier laser hair removal clinic. Founded by Candice Bezuidenhout, offering pain-free treatments with advanced 4-wavelength technology.',
+  alternates: {
+    canonical: '/about',
+  },
 }
 
 const values = [

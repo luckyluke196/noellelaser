@@ -4,6 +4,9 @@ import { Sparkles, Zap, Shield, Clock, Check, Phone } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Services',
   description: 'Explore our comprehensive laser hair removal services in Randburg. Pain-free treatments with our advanced 4-wavelength machine. Only 4-6 sessions needed for great results.',
+  alternates: {
+    canonical: '/services',
+  },
 }
 
 const treatmentAreas = [

@@ -5,6 +5,9 @@ import { Phone, Clock, Sparkles } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Pricing',
   description: 'Transparent pricing for laser hair removal treatments at Noelle Laser in Randburg, Johannesburg. View our competitive rates and package deals.',
+  alternates: {
+    canonical: '/pricing',
+  },
 }
 
 const womensPricing = [

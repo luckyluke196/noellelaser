@@ -6,6 +6,9 @@ import { Phone, MessageCircle } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'FAQ',
   description: 'Frequently asked questions about laser hair removal at Noelle Laser in Randburg. Learn about our pain-free procedure, 4-6 session results, and more.',
+  alternates: {
+    canonical: '/faq',
+  },
 }
 
 const generalFAQs = [

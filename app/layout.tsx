@@ -5,6 +5,7 @@ import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://noellelaser.co.za'),
   title: {
     default: 'Noelle Laser | Premium Laser Hair Removal in Johannesburg',
     template: '%s | Noelle Laser',
@@ -12,6 +13,9 @@ export const metadata: Metadata = {
   description: 'Experience smooth, confident skin with Noelle Laser. Premium laser hair removal services in Johannesburg, South Africa. Safe, effective, and long-lasting results.',
   keywords: ['laser hair removal', 'Johannesburg', 'South Africa', 'beauty', 'skincare', 'hair removal', 'Sandton'],
   authors: [{ name: 'Noelle Laser' }],
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'Noelle Laser | Premium Laser Hair Removal in Johannesburg',
     description: 'Experience smooth, confident skin with Noelle Laser. Premium laser hair removal services in Johannesburg, South Africa.',

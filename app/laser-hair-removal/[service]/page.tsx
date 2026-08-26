@@ -15,6 +15,9 @@ export function generateMetadata({ params }: { params: { service: string } }): M
   return {
     title: `Laser Hair Removal ${service.name} in Randburg | From ${service.priceDisplay}`,
     description: `Laser hair removal for ${service.name.toLowerCase()} at Noelle Laser in Randburg, Johannesburg. ${service.priceDisplay} per session, ${service.sessions} recommended. Pain-free treatment, results from the first session.`,
+    alternates: {
+      canonical: `/laser-hair-removal/${service.slug}`,
+    },
   }
 }
 

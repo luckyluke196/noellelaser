@@ -89,6 +89,21 @@ export default function PricingPage() {
         </div>
       </section>
 
+      {/* Price Comparison Callout */}
+      <section className="bg-rose-gold-light/30 py-4">
+        <div className="container-custom px-4 text-center">
+          <p className="text-charcoal">
+            Wondering how we compare to other clinics?{' '}
+            <Link
+              href="/blog/laser-hair-removal-prices-randburg-johannesburg"
+              className="text-burgundy font-semibold hover:underline"
+            >
+              See how our prices stack up against other Randburg &amp; Johannesburg clinics →
+            </Link>
+          </p>
+        </div>
+      </section>
+
       {/* Women's Pricing Section */}
       <section className="bg-white section-padding">
         <div className="container-custom">

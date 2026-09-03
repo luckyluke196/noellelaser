@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { servicesData } from '@/lib/services-data'
+import { blogPosts } from '@/lib/blog-data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://noellelaser.co.za'
@@ -7,6 +8,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const servicePages: MetadataRoute.Sitemap = servicesData.map((service) => ({
     url: `${baseUrl}/laser-hair-removal/${service.slug}`,
     lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.6,
+  }))
+
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
     changeFrequency: 'monthly',
     priority: 0.6,
   }))
@@ -48,6 +56,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
     ...servicePages,
+    ...blogPages,
   ]
 }

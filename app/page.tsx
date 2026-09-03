@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import ServiceCard from '@/components/ServiceCard'
 import { Sparkles, Shield, Clock, Heart, Zap, ChevronRight, Phone } from 'lucide-react'
@@ -70,18 +71,33 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-rose-gold-light via-warm-white to-rose-gold-light min-h-[90vh] flex items-center">
-        <div className="container-custom section-padding text-center">
-          <div className="inline-flex items-center gap-2 bg-burgundy/10 text-burgundy px-4 py-2 rounded-full mb-6">
+      <section className="relative overflow-hidden min-h-[90vh] flex items-center">
+        <Image
+          src="/noelle-laser-hero-image - mobile.png"
+          alt=""
+          fill
+          priority
+          className="object-cover sm:hidden"
+        />
+        <Image
+          src="/noelle-laser-hero-image.png"
+          alt=""
+          fill
+          priority
+          className="object-cover hidden sm:block"
+        />
+        <div className="absolute inset-0 bg-charcoal/60" />
+        <div className="container-custom section-padding relative text-center" style={{ transform: 'translateY(2cm)' }}>
+          <div className="inline-flex items-center gap-2 bg-white/90 text-burgundy px-4 py-2 rounded-full mb-6">
             <Sparkles className="h-4 w-4" />
             <span className="text-sm font-medium">Pain-Free Laser Hair Removal in Randburg</span>
           </div>
-          <h1 className="heading-1 mb-6 max-w-4xl mx-auto">
+          <h1 className="heading-1 mb-6 max-w-4xl mx-auto text-white">
             Embrace Smooth, Confident Skin with{' '}
-            <span className="text-burgundy">Noelle Laser</span>
+            <span className="text-rose-gold">Noelle Laser</span>
           </h1>
-          <p className="text-body max-w-2xl mx-auto mb-10">
-            Experience pain-free laser hair removal with results from the first session. 
+          <p className="text-body text-white/90 max-w-2xl mx-auto mb-10">
+            Experience pain-free laser hair removal with results from the first session.
             Our 4-wavelength technology delivers great results with just 4-6 sessions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -89,7 +105,10 @@ export default function HomePage() {
               <Phone className="h-5 w-5" />
               Book Today - 072 299 1188
             </a>
-            <Link href="/services" className="btn-secondary">
+            <Link
+              href="/services"
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white hover:text-burgundy transition-all duration-300"
+            >
               View Our Services
             </Link>
           </div>

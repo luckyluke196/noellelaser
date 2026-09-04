@@ -1,5 +1,10 @@
 export type ServiceCategory = 'women' | 'men'
 
+export interface ServiceFaq {
+  question: string
+  answer: string
+}
+
 export interface ServiceData {
   slug: string
   name: string
@@ -10,6 +15,9 @@ export interface ServiceData {
   groupName: string
   description: string
   sessions: string
+  about: string
+  idealFor: string
+  faqs: ServiceFaq[]
 }
 
 export const servicesData: ServiceData[] = [
@@ -24,6 +32,13 @@ export const servicesData: ServiceData[] = [
     groupName: 'Face & Neck',
     description: 'Say goodbye to upper lip hair, waxing irritation, and daily upkeep with fast, precise laser treatment.',
     sessions: '4-6 sessions',
+    about: 'Upper lip hair is one of the most commonly treated areas we see, and one of the quickest — most sessions take under 10 minutes. Because the hair here is often fine and the skin is sensitive, we use lower, more controlled energy settings than on body areas, which keeps the treatment comfortable while still targeting the follicle effectively. Many clients switch to laser after years of waxing or threading left the area red, bumpy, or prone to ingrown hairs.',
+    idealFor: 'Anyone who waxes, threads, or bleaches their upper lip regularly and wants to stop the cycle of regrowth and irritation.',
+    faqs: [
+      { question: 'Does upper lip laser hurt more than other areas?', answer: 'No — if anything it tends to feel milder. The treatment area is small, sessions are short, and we use settings suited to facial skin, so most clients describe it as a mild flicking sensation rather than pain.' },
+      { question: 'Will laser affect my skincare or makeup routine?', answer: 'We recommend avoiding makeup and active skincare (retinols, exfoliants) on the area for 24-48 hours after treatment, but otherwise it fits easily around a normal routine.' },
+      { question: 'How soon will I notice less regrowth?', answer: 'Most clients see visibly finer, sparser regrowth after the second or third session, with the fullest results by session 4-6.' },
+    ],
   },
   {
     slug: 'brow',
@@ -35,6 +50,13 @@ export const servicesData: ServiceData[] = [
     groupName: 'Face & Neck',
     description: 'Clean up stray brow hairs permanently, with precise shaping that keeps your natural brow line intact.',
     sessions: '4-6 sessions',
+    about: 'Brow laser is about precision, not removing the whole brow — we work carefully around your natural shape to permanently reduce the stray hairs between your brows and along the edges that you\'d otherwise tweeze weekly. It pairs well with regular brow shaping appointments, since it cuts down the maintenance between them rather than replacing them entirely.',
+    idealFor: 'Clients who tweeze their unibrow or brow edges frequently and want less upkeep between shaping appointments.',
+    faqs: [
+      { question: 'Will this change the shape of my eyebrows?', answer: 'No — we only target the stray hairs outside your desired brow shape, which you mark or discuss with your therapist beforehand. Your natural brow shape stays intact.' },
+      { question: 'Can I still get my brows threaded or waxed between sessions?', answer: 'We recommend avoiding waxing or threading in the 4-6 weeks between laser sessions, since the follicle needs to be intact for the laser to target it effectively.' },
+      { question: 'Is it safe to treat so close to the eyes?', answer: 'Yes — we use protective eyewear and precise, controlled application specifically suited to the delicate skin around the brow area.' },
+    ],
   },
   {
     slug: 'chin',
@@ -46,6 +68,13 @@ export const servicesData: ServiceData[] = [
     groupName: 'Face & Neck',
     description: 'A quick, pain-free treatment for chin hair that leaves skin smooth without the irritation of plucking or waxing.',
     sessions: '4-6 sessions',
+    about: 'Chin hair is often driven by hormonal factors, which means it can be more stubborn and coarser than hair elsewhere on the face — good news is that coarser, darker hair typically responds very well to laser. We often see clients who\'ve plucked the same few hairs for years finally get lasting relief after a full course of sessions, since plucking alone doesn\'t stop regrowth and can worsen ingrown hairs over time.',
+    idealFor: 'Anyone dealing with coarse or dark chin hairs, especially where plucking has become a daily or weekly habit.',
+    faqs: [
+      { question: 'Why does chin hair keep coming back even though I pluck it constantly?', answer: 'Plucking removes the visible hair but leaves the follicle intact, so it regrows — often coarser. Laser targets the follicle itself, which is why it reduces regrowth permanently over a course of sessions rather than days.' },
+      { question: 'Is chin hair linked to hormones, and does that affect treatment?', answer: 'Chin hair can be hormonally influenced, but this doesn\'t change how laser treats it — the laser targets pigment in the hair regardless of the cause, though hormonal hair can sometimes need a couple of extra maintenance sessions.' },
+      { question: 'Can I treat ingrown hairs on my chin with laser?', answer: 'Yes, and it\'s one of the most common reasons clients choose laser here — reducing hair growth also reduces the ingrown hairs and bumps that come from plucking or shaving.' },
+    ],
   },
   {
     slug: 'top-of-bikini',
@@ -57,6 +86,13 @@ export const servicesData: ServiceData[] = [
     groupName: 'Bikini Area',
     description: 'A discreet, professional treatment for the bikini line, ideal for anyone wanting a low-maintenance tidy-up.',
     sessions: '4-6 sessions',
+    about: 'This treats the visible bikini line only — the area that shows outside swimwear or underwear — rather than the full bikini area. It\'s a popular starting point for clients who are new to laser and want to stop the cycle of shaving bumps and ingrown hairs along the line without committing to a more extensive treatment area.',
+    idealFor: 'Clients who want a clean bikini line for swimwear without treating the full bikini area.',
+    faqs: [
+      { question: 'What\'s the difference between "top of bikini" and "full Hollywood"?', answer: 'Top of bikini only treats the visible line along the edges of underwear or swimwear. Full Hollywood treats the entire bikini area. Many clients start with the bikini line and expand later if they want.' },
+      { question: 'How long should my hair be before a session?', answer: 'A short stubble (like 1-2 days of regrowth after shaving) is ideal — the follicle needs to be visible enough for the laser to target it, but long hair isn\'t necessary and can be trimmed beforehand.' },
+      { question: 'Does this help with ingrown hairs along the bikini line?', answer: 'Yes — ingrown hairs are one of the most common reasons clients treat this area, since reducing regrowth significantly reduces the irritation and bumps caused by shaving or waxing here.' },
+    ],
   },
   {
     slug: 'stomach',
@@ -68,6 +104,13 @@ export const servicesData: ServiceData[] = [
     groupName: 'Body',
     description: 'Smooth, hair-free stomach skin with a comfortable treatment suited to sensitive skin.',
     sessions: '4-6 sessions',
+    about: 'Stomach hair, including the fine line some clients have running down from the navel, tends to be finer than hair on the arms or legs, so we adjust our settings accordingly. Because the skin here can be more sensitive, especially post-pregnancy, we take extra care with cooling and pacing during the session to keep it comfortable.',
+    idealFor: 'Clients with a visible happy trail or general stomach hair who want smooth, even-toned skin without regular shaving.',
+    faqs: [
+      { question: 'Is stomach skin more sensitive to treat?', answer: 'It can be, particularly post-pregnancy or after significant skin changes, which is why we adjust energy settings and pacing specifically for this area rather than using body-standard settings.' },
+      { question: 'Can this treat the "happy trail" specifically?', answer: 'Yes, the fine vertical line of hair many people have from the navel downward is one of the most requested parts of this treatment and responds well to laser.' },
+      { question: 'How many sessions before I notice a real difference?', answer: 'Most clients notice visibly finer, patchier regrowth from session 3 onward, with the full course of 4-6 sessions giving the most complete, lasting reduction.' },
+    ],
   },
   {
     slug: 'bikini-sides',
@@ -79,6 +122,13 @@ export const servicesData: ServiceData[] = [
     groupName: 'Bikini Area',
     description: 'Targeted treatment for the bikini sides, giving clean, confident lines all year round.',
     sessions: '4-6 sessions',
+    about: 'Bikini sides covers the hip-adjacent area that peeks out from higher-cut swimwear and underwear — a spot that\'s awkward to shave consistently and prone to razor bumps. It\'s often booked alongside the top of bikini or full Hollywood for a more complete result, but works well as a standalone treatment too.',
+    idealFor: 'Clients who wear higher-cut swimwear or underwear and want clean lines without regular shaving in an awkward-to-reach spot.',
+    faqs: [
+      { question: 'Can I combine bikini sides with other bikini area treatments?', answer: 'Yes — it\'s commonly booked together with top of bikini or full Hollywood, and we can quote a combined package rate rather than treating each area separately.' },
+      { question: 'Why does this area get more razor bumps than others?', answer: 'The skin here folds and rubs against clothing more than flatter areas, which is exactly why regular shaving tends to cause more irritation — laser reduces the hair that\'s causing the friction in the first place.' },
+      { question: 'Is the treatment quick?', answer: 'Yes, bikini sides is one of our faster body treatments, typically taking well under 15 minutes per session.' },
+    ],
   },
   {
     slug: 'full-hollywood',
@@ -90,6 +140,13 @@ export const servicesData: ServiceData[] = [
     groupName: 'Bikini Area',
     description: 'Complete bikini area treatment, carried out discreetly and professionally for total smoothness.',
     sessions: '4-6 sessions',
+    about: 'Full Hollywood treats the entire bikini area, front to back. We know this is the treatment clients are often most nervous to book, so our therapists prioritise a calm, professional, and fully draped process throughout — you\'re only ever exposed to the small area being treated at that moment. This is consistently one of our most requested treatments precisely because it eliminates the discomfort of regular waxing in this area.',
+    idealFor: 'Clients ready to fully commit to a hair-free bikini area and stop regular waxing or shaving in this sensitive zone.',
+    faqs: [
+      { question: 'I\'ve never had this area lasered before — what should I expect at my first appointment?', answer: 'Your therapist will talk you through the process before starting, keep you draped throughout so only the treatment area is exposed, and check in on comfort as they go. Most first-time clients tell us it was far less awkward than they expected.' },
+      { question: 'Is this treatment more painful than other bikini options?', answer: 'It can feel slightly more sensitive in places than bikini sides or top of bikini simply because the skin is more delicate, but our 4-wavelength machine and cooling settings are calibrated to keep it manageable throughout.' },
+      { question: 'How long between sessions do I need to avoid waxing?', answer: 'We recommend no waxing or plucking for at least 4-6 weeks before and between sessions, since the hair needs an intact root for the laser to target — shaving between sessions is fine.' },
+    ],
   },
   {
     slug: 'underarms',
@@ -101,6 +158,13 @@ export const servicesData: ServiceData[] = [
     groupName: 'Underarms',
     description: 'One of our quickest treatments — say goodbye to daily shaving and razor burn for good.',
     sessions: '4-6 sessions',
+    about: 'Underarm hair is typically coarse and dense, which actually makes it one of the most responsive areas to laser — clients often see faster, more dramatic reduction here than on finer-haired areas. Sessions are also our quickest, usually just a few minutes, making it an easy add-on to another treatment.',
+    idealFor: 'Anyone shaving daily or every other day and dealing with razor burn, dark shadowing, or ingrown hairs under the arms.',
+    faqs: [
+      { question: 'Why do underarms respond so well to laser?', answer: 'The hair here is typically thick and dark, which gives the laser more pigment to target — this generally means faster, more visible results compared to areas with fine or light hair.' },
+      { question: 'Does laser help with the dark shadowing under my arms?', answer: 'Reducing hair growth often lightens the appearance of shadowing over time, since much of that darkness comes from stubble and hair follicles beneath the skin surface.' },
+      { question: 'Can I use deodorant right after a session?', answer: 'We recommend skipping deodorant for a few hours after treatment while the skin settles, then your normal routine can resume.' },
+    ],
   },
   {
     slug: 'full-face',
@@ -112,6 +176,13 @@ export const servicesData: ServiceData[] = [
     groupName: 'Face & Neck',
     description: 'A complete facial treatment covering lip, chin, and cheeks for an all-over flawless finish.',
     sessions: '4-6 sessions',
+    about: 'Full face combines upper lip, chin, cheeks, and jawline into one session, which works out both more cost-effective and more convenient than booking each area separately if you\'re dealing with hair growth across multiple parts of the face. This is especially popular with clients managing hormonally-driven facial hair (PCOS is a common reason clients come to us for this), since it treats the whole pattern rather than one area at a time.',
+    idealFor: 'Clients dealing with hair growth across several facial areas at once, rather than one isolated spot.',
+    faqs: [
+      { question: 'Is full face better value than booking lip, chin, and cheeks separately?', answer: 'Yes — because it\'s treated as one combined session rather than several standalone bookings, full face works out more cost-effective per area treated, plus it saves you multiple separate appointments.' },
+      { question: 'I have PCOS-related facial hair — will this help?', answer: 'We see this regularly. Laser treats the hair follicle directly regardless of the hormonal cause, so it can meaningfully reduce PCOS-related facial hair, though these cases sometimes benefit from a couple of extra maintenance sessions.' },
+      { question: 'How long does a full face session take?', answer: 'Typically 20-30 minutes, since it covers multiple facial zones in one sitting rather than treating them across separate short appointments.' },
+    ],
   },
   {
     slug: 'half-arms',
@@ -123,6 +194,13 @@ export const servicesData: ServiceData[] = [
     groupName: 'Arms',
     description: 'Smooth, hair-free arms from elbow to wrist, perfect for short sleeves with confidence.',
     sessions: '4-6 sessions',
+    about: 'Half arms covers from the elbow down to the wrist — the part of the arm that\'s visible in short sleeves and the area most clients shave regularly. Forearm hair varies a lot from person to person in thickness and colour, so your therapist will assess and adjust settings specifically for your skin and hair type at the first session.',
+    idealFor: 'Clients who shave their forearms regularly and want smoother, more even-toned skin for short sleeves.',
+    faqs: [
+      { question: 'Can I upgrade to full arms later if I want more coverage?', answer: 'Yes — many clients start with half arms and add the upper arm later; we\'ll simply extend your treatment plan rather than starting over.' },
+      { question: 'Will this work if my arm hair is quite fine and light?', answer: 'Laser generally works best on darker, coarser hair, so very fine or light forearm hair may see a more gradual reduction — your therapist will give you a realistic expectation at your consultation.' },
+      { question: 'Does treating forearms help with dark hair shadowing under sleeves?', answer: 'Yes, reducing the density of forearm hair generally reduces that shadowed look, especially for clients with darker hair.' },
+    ],
   },
   {
     slug: 'half-legs',
@@ -134,6 +212,13 @@ export const servicesData: ServiceData[] = [
     groupName: 'Legs',
     description: 'Silky smooth lower legs without the hassle of regular shaving or waxing appointments.',
     sessions: '4-6 sessions',
+    about: 'Half legs treats from the knee down, the area most people shave the most often since it\'s constantly on display in shorts, skirts, and skirts of all lengths. It\'s a great entry point into laser for clients who aren\'t ready to commit to full legs but want to eliminate the most frequent part of their shaving routine.',
+    idealFor: 'Clients who want to stop shaving their lower legs specifically, without committing to the full leg just yet.',
+    faqs: [
+      { question: 'Why choose half legs over full legs?', answer: 'Lower legs are typically shaved most often, so many clients start here to address the highest-maintenance area first, then decide later whether to extend treatment to the thighs.' },
+      { question: 'Will I still need to shave between sessions?', answer: 'Yes, light shaving between sessions is fine and expected — what stops over the course of treatment is the regrowth itself, not the need to occasionally tidy up in the interim.' },
+      { question: 'How long is a typical half leg session?', answer: 'Around 20-30 minutes, depending on hair density, since it covers a larger surface area than facial or underarm treatments.' },
+    ],
   },
   {
     slug: 'full-legs',
@@ -145,6 +230,13 @@ export const servicesData: ServiceData[] = [
     groupName: 'Legs',
     description: 'Long-lasting smoothness from thigh to ankle, with fewer sessions needed thanks to our 4-wavelength machine.',
     sessions: '4-6 sessions',
+    about: 'Full legs treats thigh to ankle in one session, which is where our 4-wavelength machine makes the biggest practical difference — a larger surface area covered efficiently with a stronger beam and higher pulse means shorter sessions and fewer overall visits compared to older single-wavelength lasers. This is one of our most booked treatments among clients who want to be fully done with leg shaving.',
+    idealFor: 'Clients ready to stop shaving or waxing their legs entirely, from thigh to ankle.',
+    faqs: [
+      { question: 'How long does a full leg session take?', answer: 'Typically 45-60 minutes given the surface area involved, though our 4-wavelength technology keeps this shorter than it would be on older laser systems.' },
+      { question: 'Is full legs more painful than half legs?', answer: 'Sensation varies more by hair density and skin sensitivity than by treatment area size — thighs are sometimes slightly more sensitive than shins, but our cooling settings are adjusted throughout the session.' },
+      { question: 'Can I combine full legs with a bikini treatment in one visit?', answer: 'Yes, this is a common combination and we can schedule both in a single longer appointment — just mention it when booking so we allocate enough time.' },
+    ],
   },
   {
     slug: 'full-body',
@@ -156,6 +248,13 @@ export const servicesData: ServiceData[] = [
     groupName: 'Full Body',
     description: 'Our most comprehensive treatment — complete head-to-toe smoothness in one convenient session.',
     sessions: '4-6 sessions',
+    about: 'Full body combines every treatable area — face, underarms, arms, bikini, and legs — into a single comprehensive session, which is by far the most cost-effective way to treat multiple areas compared to booking them individually. Sessions run longer, typically 60-90 minutes, so we usually recommend booking this as a dedicated appointment rather than fitting it around other plans.',
+    idealFor: 'Clients wanting comprehensive hair removal across most or all areas, at the best combined value.',
+    faqs: [
+      { question: 'Is full body actually cheaper than booking each area separately?', answer: 'Yes, significantly — bundling every area into one full body treatment works out considerably less than paying for face, arms, legs, underarms, and bikini as separate line items.' },
+      { question: 'How long should I set aside for a full body session?', answer: 'We recommend allowing 60-90 minutes, since the session covers multiple zones with different skin sensitivities and hair densities that each need their own settings.' },
+      { question: 'Can I choose to exclude one area, like the face, from full body?', answer: 'Yes, full body is flexible — tell us upfront which areas you\'d like included and we\'ll tailor the session and quote accordingly.' },
+    ],
   },
   // Men's services
   {
@@ -168,6 +267,13 @@ export const servicesData: ServiceData[] = [
     groupName: "Men's Face",
     description: 'A quick, precise treatment to keep ear hair permanently under control.',
     sessions: '4-6 sessions',
+    about: 'Ear hair tends to get coarser with age, and trimming it manually is a never-ending task since it grows back within days. Laser targets the follicles on the outer ear and helix directly, which is a far more precise and lasting solution than regular trimming with clippers or scissors.',
+    idealFor: 'Men noticing coarser ear hair growth who are tired of trimming every few days.',
+    faqs: [
+      { question: 'Is it safe to use laser this close to the ear canal?', answer: 'Yes — we only treat the visible outer ear and helix area, well away from the ear canal itself, using precise, controlled application.' },
+      { question: 'Why does ear hair seem to get worse with age?', answer: 'Hair follicles in the ear, like the nose, tend to become more active and produce coarser hair with age — it\'s a common and normal change, and one laser handles well since coarser hair responds strongly to treatment.' },
+      { question: 'How quickly will I stop needing to trim?', answer: 'Most clients notice a significant drop in regrowth speed and thickness by the third session, meaning far less frequent trimming even before the full course is complete.' },
+    ],
   },
   {
     slug: 'nose-hair',
@@ -179,6 +285,13 @@ export const servicesData: ServiceData[] = [
     groupName: "Men's Face",
     description: 'Fast, comfortable treatment for nose hair, done with precision and care.',
     sessions: '4-6 sessions',
+    about: 'We treat the visible hair just inside and around the nostril opening, never deep inside the nasal passage, using a targeted applicator suited to this small, delicate area. It\'s a fast add-on treatment for clients already booked for another facial area, since sessions here typically take just a couple of minutes.',
+    idealFor: 'Men who regularly trim or pluck nose hair and want a longer-lasting alternative.',
+    faqs: [
+      { question: 'How far into the nose does the treatment go?', answer: 'We only treat the visible hair at the nostril opening, not inside the nasal passage — this keeps the treatment both safe and comfortable.' },
+      { question: 'Is this treatment uncomfortable given how sensitive the area is?', answer: 'Most clients find it more manageable than expected, since sessions are very short and we use gentle, controlled settings specifically for this delicate area.' },
+      { question: 'Can I book this alongside ear hair or beard and neck treatment?', answer: 'Yes, nose hair is very commonly combined with ear hair or beard and neck treatments in the same visit, since all three are quick facial add-ons.' },
+    ],
   },
   {
     slug: 'mens-underarms',
@@ -190,6 +303,13 @@ export const servicesData: ServiceData[] = [
     groupName: "Men's Underarms",
     description: 'A quick, effective treatment for men that eliminates the need for daily shaving.',
     sessions: '4-6 sessions',
+    about: 'Men\'s underarm hair is typically denser than women\'s, which is why pricing starts slightly higher — more follicles mean more energy needed to treat the area thoroughly. It remains one of our faster treatments overall, and one of the most requested by male clients wanting to cut down on sweat odour and irritation from daily shaving.',
+    idealFor: 'Men who shave underarms regularly for sport, hygiene, or comfort and want a lower-maintenance alternative.',
+    faqs: [
+      { question: 'Why is men\'s underarm pricing different from women\'s?', answer: 'Men typically have denser underarm hair, which needs more energy and sometimes a couple of extra passes to treat thoroughly — this is reflected in the "from" pricing, finalised after an in-person assessment.' },
+      { question: 'Does reducing underarm hair help with sweat or odour?', answer: 'Many clients report noticeably less trapped sweat and odour once hair density is reduced, since hair can hold onto moisture and bacteria throughout the day.' },
+      { question: 'Is this treatment popular with athletes?', answer: 'Yes, we regularly treat athletes and gym-goers who want to reduce underarm hair for comfort and hygiene during training.' },
+    ],
   },
   {
     slug: 'half-leg',
@@ -201,6 +321,13 @@ export const servicesData: ServiceData[] = [
     groupName: "Men's Legs",
     description: 'Smooth, hair-free lower legs with lasting results from our advanced laser technology.',
     sessions: '4-6 sessions',
+    about: 'Half leg for men covers knee to ankle and is popular with cyclists, swimmers, and runners who currently shave for performance or comfort reasons and want to stop the constant upkeep. Men\'s leg hair is generally denser than women\'s, so sessions are calibrated with that in mind from the first visit.',
+    idealFor: 'Male athletes and anyone shaving their lower legs regularly for sport, comfort, or preference.',
+    faqs: [
+      { question: 'Is this treatment popular with cyclists and swimmers?', answer: 'Yes, it\'s one of our most requested treatments among athletes who currently shave their legs regularly for aerodynamics or comfort and want a permanent alternative.' },
+      { question: 'Does denser male leg hair mean more sessions are needed?', answer: 'Not necessarily more sessions, but density does affect how much energy and time a session requires — your therapist will assess this and set expectations at your first visit.' },
+      { question: 'Can I switch to full leg treatment later?', answer: 'Yes, we can extend your treatment area to include the thighs at any point without restarting your session count on the lower leg.' },
+    ],
   },
   {
     slug: 'half-arm',
@@ -212,6 +339,13 @@ export const servicesData: ServiceData[] = [
     groupName: "Men's Arms",
     description: 'A comfortable, effective treatment for smooth forearms without the upkeep of shaving.',
     sessions: '4-6 sessions',
+    about: 'Half arm for men treats the forearm, from elbow to wrist — an area that\'s harder to shave evenly than it looks, especially around the wrist bone, and prone to razor bumps for men who do maintain it. Because male forearm hair is often thicker and more visible than female forearm hair, results are typically quite noticeable by the middle of the treatment course.',
+    idealFor: 'Men who currently shave or trim their forearms and want smoother, more even results.',
+    faqs: [
+      { question: 'Do men typically see faster results on forearms than women?', answer: 'Hair on male forearms tends to be thicker and darker on average, which the laser targets effectively — many male clients notice a visible reduction by session 3.' },
+      { question: 'Is forearm hair removal common among men, or mostly a niche request?', answer: 'It\'s increasingly common, particularly among men who already shave for grooming, sport, or personal preference and want to stop the ongoing maintenance.' },
+      { question: 'Can I add the upper arm later?', answer: 'Yes, this simply extends your treatment area — no need to restart your session plan.' },
+    ],
   },
   {
     slug: 'mens-stomach',
@@ -223,6 +357,13 @@ export const servicesData: ServiceData[] = [
     groupName: "Men's Body",
     description: 'Professional stomach hair removal with a comfortable, pain-free experience.',
     sessions: '4-6 sessions',
+    about: 'Male stomach hair is often denser and covers a larger area than female stomach hair, including up toward the chest in some clients, which is why pricing here is quoted "from" and finalised after an in-person assessment of coverage and density. It\'s one of our most requested men\'s body treatments, particularly among clients who swim or want a cleaner look without ongoing trimming or waxing.',
+    idealFor: 'Men with dense stomach hair who currently trim or wax and want a permanent, low-maintenance result.',
+    faqs: [
+      { question: 'Why is stomach hair removal priced "from" rather than a fixed rate?', answer: 'Coverage and density vary a lot between clients, and sometimes extends toward the chest — we assess this in person at your first visit to give you an accurate, fair quote.' },
+      { question: 'Is stomach hair removal common for men, or unusual?', answer: 'It\'s one of the most requested men\'s body treatments we offer, often alongside back treatment for a complete torso result.' },
+      { question: 'How does this compare in comfort to back treatment?', answer: 'Stomach skin is generally treated as comfortably as the back, though we adjust settings for the area and check in with you throughout the session.' },
+    ],
   },
   {
     slug: 'back',
@@ -234,6 +375,13 @@ export const servicesData: ServiceData[] = [
     groupName: "Men's Body",
     description: 'One of our most popular men\'s treatments — permanent, professional back hair removal.',
     sessions: '4-6 sessions',
+    about: 'Back hair removal is consistently one of our top-requested treatments for men, mainly because it\'s an area that\'s physically impossible to shave or wax on yourself effectively. Coverage varies significantly from client to client — some need the full back, others just the shoulders or lower back — so pricing is quoted "from" and confirmed after we assess the area in person.',
+    idealFor: 'Men who can\'t effectively maintain their own back hair and want a permanent, professional solution.',
+    faqs: [
+      { question: 'Why is back treatment one of your most popular men\'s services?', answer: 'It\'s an area almost impossible to shave or wax yourself properly, and salon waxing is painful and short-lived — laser is the only realistic path to a lasting result here.' },
+      { question: 'Does pricing depend on how much of my back needs treatment?', answer: 'Yes — some clients need full back coverage while others only need shoulders or the lower back, so we quote a final price after assessing coverage at your first visit.' },
+      { question: 'How long does a full back session take?', answer: 'Typically 30-45 minutes depending on coverage and hair density, similar in length to a full leg session.' },
+    ],
   },
   {
     slug: 'beard-and-neck',
@@ -245,6 +393,13 @@ export const servicesData: ServiceData[] = [
     groupName: "Men's Face",
     description: 'Precision shaping and permanent reduction for beard line and neck hair.',
     sessions: '4-6 sessions',
+    about: 'This treatment isn\'t about removing your beard — it\'s about permanently defining and cleaning up the neckline and cheek line so you get a sharp, consistent edge without daily trimming or the razor bumps that come from shaving those borders. It\'s especially popular with men who keep a defined beard style and are tired of maintaining the same edge lines every few days.',
+    idealFor: 'Men who maintain a defined beard style and want a permanent, sharp neckline and edge without daily upkeep.',
+    faqs: [
+      { question: 'Will this remove my whole beard?', answer: 'No — we work specifically on the neckline and edges you want defined, discussed with your therapist beforehand, so your beard shape stays exactly as you want it.' },
+      { question: 'Can I still trim and shape my beard normally between sessions?', answer: 'Yes, you can continue trimming your beard as usual — the laser only targets the specific border areas we\'ve agreed on, not the beard itself.' },
+      { question: 'Does this help with razor bumps along the neckline?', answer: 'Yes, this is one of the main reasons men choose this treatment — permanently reducing hair along the neckline eliminates the ingrown hairs and bumps caused by shaving that edge repeatedly.' },
+    ],
   },
   {
     slug: 'mens-arms',
@@ -256,6 +411,13 @@ export const servicesData: ServiceData[] = [
     groupName: "Men's Arms",
     description: 'Full arm treatment for men wanting lasting smoothness without regular shaving.',
     sessions: '4-6 sessions',
+    about: 'Full arm treatment covers from shoulder to wrist in one session, treating both the typically denser upper arm and the forearm together. This is a longer session than half arm given the surface area, but our 4-wavelength machine keeps it efficient — many male clients choose this over half arm from the start since upper and lower arm hair growth tends to be fairly uniform.',
+    idealFor: 'Men wanting complete arm hair removal from shoulder to wrist, rather than just the forearm.',
+    faqs: [
+      { question: 'Should I book full arm or just half arm?', answer: 'If your hair growth is fairly consistent from shoulder to wrist, full arm is usually better value than treating the forearm alone and coming back for the upper arm later.' },
+      { question: 'How long does a full arm session take?', answer: 'Typically 30-40 minutes given the surface area covered, longer than a half arm session but shorter than a full leg session.' },
+      { question: 'Is upper arm hair generally denser than forearm hair for men?', answer: 'It can be, which is factored into how we approach the session — your therapist assesses both areas and adjusts settings accordingly during treatment.' },
+    ],
   },
   {
     slug: 'mens-legs',
@@ -267,6 +429,13 @@ export const servicesData: ServiceData[] = [
     groupName: "Men's Legs",
     description: 'Complete leg treatment for men, delivering long-lasting results in fewer sessions.',
     sessions: '4-6 sessions',
+    about: 'Full leg treatment for men covers thigh to ankle in one session and is especially popular with competitive cyclists, swimmers, and triathletes who currently shave for performance and want to be done with the upkeep entirely. Given the density of male leg hair and the surface area involved, sessions run longer, but our 4-wavelength machine means fewer total sessions than older laser technology would require.',
+    idealFor: 'Male athletes and anyone wanting complete leg hair removal from thigh to ankle.',
+    faqs: [
+      { question: 'Do you treat many competitive athletes for this?', answer: 'Yes, full leg is one of our most requested treatments among cyclists, swimmers, and triathletes who shave regularly for performance and want a permanent solution.' },
+      { question: 'How long does a full leg session take for men?', answer: 'Usually 45-60 minutes given the surface area and typical hair density, similar in length to the women\'s full leg treatment.' },
+      { question: 'Will results be noticeable even with dense leg hair?', answer: 'Yes — denser, darker hair generally responds very well to laser, since there\'s more pigment for the laser to target in each follicle.' },
+    ],
   },
 ]
 

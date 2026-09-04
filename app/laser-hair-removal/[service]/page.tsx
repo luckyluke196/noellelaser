@@ -55,11 +55,28 @@ export default function ServiceDetailPage({ params }: { params: { service: strin
     },
   }
 
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: service.faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  }
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       {/* Hero Section */}
@@ -85,6 +102,19 @@ export default function ServiceDetailPage({ params }: { params: { service: strin
           >
             Book Today
           </a>
+        </div>
+      </section>
+
+      {/* About This Treatment */}
+      <section className="bg-white section-padding pb-0">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="heading-2 mb-4">About {service.name} Laser Hair Removal</h2>
+            <p className="text-body mb-4">{service.about}</p>
+            <p className="text-body">
+              <strong>Ideal for:</strong> {service.idealFor}
+            </p>
+          </div>
         </div>
       </section>
 
@@ -174,6 +204,23 @@ export default function ServiceDetailPage({ params }: { params: { service: strin
           </div>
         </section>
       )}
+
+      {/* FAQs */}
+      <section className="bg-white section-padding">
+        <div className="container-custom max-w-3xl mx-auto">
+          <h2 className="heading-2 mb-8 text-center">
+            {service.name} Laser Hair Removal FAQs
+          </h2>
+          <div className="space-y-6">
+            {service.faqs.map((faq, index) => (
+              <div key={index} className="bg-rose-gold-light/20 rounded-2xl p-6 shadow-md">
+                <h3 className="heading-3 mb-2 text-lg">{faq.question}</h3>
+                <p className="text-body">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Cross-links */}
       <section className="bg-charcoal section-padding">
